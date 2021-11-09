@@ -1,0 +1,30 @@
+<h1 class="animated fadeIn">{{ user.name | uppercase }} <small>({{ user.company.name }})</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast">
+
+  <div class="col-md-4">
+
+    <img src="../../../assets/user-image.png" class="img-fluid" [alt]="user.name">
+    <br><br>
+    <a [routerLink]="['/list']" class="btn btn-outline-danger btn-block">Regresar</a>
+
+  </div>
+
+  <div class="col-md-8">
+    <h3>{{ user.username }}</h3>
+    <hr>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipiscing elit erat ad integer est, sollicitudin dapibus volutpat justo pulvinar velit bibendum malesuada ante ligula hac, duis facilisis nullam placerat molestie sagittis etiam lectus class natoque. Varius dictum per egestas tempor donec netus turpis semper, proin bibendum ullamcorper felis laoreet inceptos natoque iaculis, vitae ultricies cras ad cum feugiat mattis. Leo penatibus donec cubilia lacinia blandit vehicula parturient, montes aptent himenaeos vitae est sed, cum pretium maecenas erat sagittis vulputate.
+    </p>
+    <p>
+      Lugar de Residencia: {{user.address.street}} - {{user.address.suite}}, {{user.address.city }}
+    </p>
+    <p>
+      Correo Electronico: {{user.email}}
+    </p>
+
+  </div>
+
+</div>

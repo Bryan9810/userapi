@@ -1,0 +1,32 @@
+<h1 class="mb-4">Usuarios</h1>
+<div class="card-columns">
+    <div *ngFor="let user of users">
+        <div class="card animated fadeIn fast text-white bg-dark mb-3">
+            <img class="card-img-top" src="../../../assets/user-image.png" alt="Card image cap">
+    
+            <div class="card-body">
+                <h5 class="card-title">{{user.name}}</h5>
+                <p>{{ user.company.name}}</p>
+            </div>
+    
+            <ul class="list-group">
+                <li class="list-group-item bg-dark">
+                    <strong>Email: </strong> {{user.email}}
+                </li>
+                <li class="list-group-item bg-dark">
+                    <strong>Dirección:</strong> {{user.address.street}} - {{user.address.suite}}, {{user.address.city }}
+                </li>
+                <li class="list-group-item bg-dark">
+                    <strong>Usuario:</strong> {{user.username}}
+                </li>
+            </ul>
+    
+            <div class="card-body">
+                <button type="button" class="btn btn-outline-primary btn-block" (click)="getUser(user.id)">
+                    Ver más...
+                </button>
+            </div>
+    
+        </div>
+    </div>
+</div>
