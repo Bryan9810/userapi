@@ -13,10 +13,12 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
+  // Metodo get para todos los usuarios del Api
   getUsers() {
     return this.http.get(this.urlUsers);
   }
 
+  // Metodo get para traer Usuario por ID
   getUser(id: number) {
     const url = `${this.urlUsers}/${id}`
     return this.http.get<any>(url);

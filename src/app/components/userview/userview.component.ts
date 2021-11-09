@@ -24,7 +24,7 @@ export class UserviewComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  
   getUser(id: any) {
     this.userService.getUser(id).subscribe(
       res => {
